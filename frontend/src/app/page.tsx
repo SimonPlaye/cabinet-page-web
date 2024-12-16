@@ -11,7 +11,7 @@ export default function Home() {
           <Button variant="outline" asChild>
               <Link href="/collaborateurs">Nos collaborateurs</Link>
             </Button>
-            <Button variant="outline">Nos champs d'expertise</Button>
+            <Button variant="outline">Nos champs d&apos;expertise</Button>
           </nav>
           <Button className="bg-blue-600 hover:bg-blue-700 text-white">Contact</Button>
         </div>
@@ -29,14 +29,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl">
-              <h1 className="text-4xl font-bold mb-4">Cabinet d'avocat QUINTARD-PLAYE - JUILLAN</h1>
+              <h1 className="text-4xl font-bold mb-4">Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN</h1>
             </div>
           </div>
         </div>
         <div className="container mx-auto px-4 py-8">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
             <p className="text-xl text-center">
-            Nous sommes un cabinet d'avocat situé à Guingamp spécialisé en droit civil, droit processuel et droit de la famille, des personnes et de leur patrimoine.
+            Nous sommes un cabinet d&apos;avocat situé à Guingamp spécialisé en droit civil, droit processuel et droit de la famille, des personnes et de leur patrimoine.
             </p>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function Collaborateurs() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold">Nos Collaborateurs</h1>
           <Button asChild variant="outline">
-            <Link href="/">Retour à l'accueil</Link>
+            <Link href="/">Retour à l&apos;accueil</Link>
           </Button>
         </div>
       </header>
