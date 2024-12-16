@@ -1,0 +1,16 @@
+{
+  "generator-sicarator": {
+    "promptValues": {
+      "authorName": "SimonPlaye",
+      "authorEmail": "playesimon@gmail.com",
+      "ci": ".github",
+      "includeApi": true,
+      "apiInfrastructure": null,
+      "includeDvc": false,
+      "includeStreamlit": false
+    },
+    "projectName": "cabinet-page-web",
+    "projectSlug": "cabinet-page-web",
+    "projectDescription": "Project generated with Sicarator"
+  }
+}
