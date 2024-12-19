@@ -1,24 +1,53 @@
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Scale, Phone } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <nav className="space-x-4">
-          <Button variant="outline" asChild>
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <header className="bg-white/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+          {/* Left Section: Title in a Rectangular Box */}
+          <div className="border-2 border-primary bg-white px-6 py-3 rounded-lg mb-4 md:mb-0 transition-all hover:shadow-md">
+            <Link
+              href="/"
+              className="text-lg font-bold text-primary text-center block"
+            >
+              <span className="block">Cabinet d&apos;avocat</span>
+              <span className="block">QUINTARD-PLAYE - JUILLAN</span>
+            </Link>
+          </div>
+
+          {/* Right Section: Buttons */}
+          <nav className="flex flex-wrap justify-center gap-4">
+            <Button
+              variant="outline"
+              asChild
+              className="hover:bg-primary hover:text-white transition-colors"
+            >
+              <Link href="/poles-de-competences">Nos pôles de compétences</Link>
+            </Button>
+            <Button
+              variant="outline"
+              asChild
+              className="hover:bg-primary hover:text-white transition-colors"
+            >
               <Link href="/collaborateurs">Nos collaborateurs</Link>
             </Button>
-            <Button variant="outline">Nos champs d&apos;expertise</Button>
+            <Button
+              className="bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+              asChild
+            >
+              <Link href="/contact">Contact</Link>
+            </Button>
           </nav>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">Contact</Button>
         </div>
       </header>
 
-      <main className="flex-grow">
-        <div className="relative">
+      <main className="flex-grow pt-20">
+        <section className="relative">
           <Image
             src="/assets/balance.jpg"
             alt="Balance de la justice"
@@ -26,30 +55,152 @@ export default function Home() {
             height={1080}
             className="w-full h-[75vh] object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl">
-              <h1 className="text-4xl font-bold mb-4">Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN</h1>
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <Card className="bg-white/90 backdrop-blur-sm max-w-2xl mx-auto">
+              <CardContent className="p-6">
+                <h1 className="text-4xl font-bold mb-4 text-primary">
+                  <span className="block">Cabinet d&apos;avocat</span>
+                  <span className="block">QUINTARD-PLAYE - JUILLAN</span>
+                </h1>
+                <p className="text-xl text-gray-700">
+                  Expertise juridique à votre service
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-16">
+          <h2 className="text-3xl font-bold mb-8 text-center text-primary">
+            NOTRE CABINET
+          </h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto text-center">
+            Nous sommes un cabinet d&apos;avocat situé à Guingamp spécialisé en
+            droit civil, droit processuel et droit de la famille, des personnes
+            et de leur patrimoine.
+          </p>
+        </section>
+
+        <section className="bg-gray-100 py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-12 text-center text-primary">
+              NOS PÔLES DE COMPÉTENCES
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Droit de la famille",
+                  icon: Users,
+                  href: "/poles-de-competences/droit-de-la-famille",
+                },
+                {
+                  title: "Droit des successions",
+                  icon: Briefcase,
+                  href: "/poles-de-competences/droit-des-successions",
+                },
+                {
+                  title: "Droit pénal",
+                  icon: Scale,
+                  href: "/poles-de-competences/droit-penal",
+                },
+              ].map((item, index) => (
+                <Link href={item.href} key={index}>
+                  <Card className="hover:shadow-lg transition-shadow h-full">
+                    <CardContent className="p-6 flex flex-col items-center justify-center h-full">
+                      <item.icon className="w-16 h-16 text-primary mb-4" />
+                      <h3 className="text-xl font-semibold text-center">
+                        {item.title}
+                      </h3>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-        <div className="container mx-auto px-4 py-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
-            <p className="text-xl text-center">
-            Nous sommes un cabinet d&apos;avocat situé à Guingamp spécialisé en droit civil, droit processuel et droit de la famille, des personnes et de leur patrimoine.
-            </p>
+        </section>
+
+        <section className="container mx-auto px-4 py-16">
+          <h2 className="text-3xl font-bold mb-12 text-center text-primary">
+            NOS COLLABORATEURS
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {[
+              {
+                name: "Laetitia Quintard",
+                image: "/assets/lawyer_1.jpeg",
+                description:
+                  "Expert in Corporate Law with 10+ years of experience.",
+              },
+              {
+                name: "Marie-Charlotte Juillan",
+                image: "/assets/lawyer_2.jpeg",
+                description: "Specialist in International Law and Arbitration.",
+              },
+            ].map((collaborator, index) => (
+              <Card key={index} className="overflow-hidden">
+                <CardContent className="p-0">
+                  <Image
+                    src={collaborator.image}
+                    alt={collaborator.name}
+                    width={400}
+                    height={400}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">
+                      {collaborator.name}
+                    </h3>
+                    <p className="text-gray-600">{collaborator.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        </div>
+        </section>
+
+        <section className="bg-gray-100 py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-12 text-center text-primary">
+              NOUS CONTACTER
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4">
+                    Horaires d&apos;ouverture
+                  </h3>
+                  <p className="mb-2">
+                    Nous recevons sur rendez-vous du lundi au vendredi.
+                  </p>
+                  <p>Le Cabinet est ouvert de 8h30 à 12h et de 13h30 à 19h.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4">Coordonnées</h3>
+                  <p className="mb-2">
+                    Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN
+                  </p>
+                  <p className="mb-2">1 rue du Général de Gaulle</p>
+                  <p className="mb-2">22200 Guingamp</p>
+                  <p>Téléphone: 02 96 43 84 52</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
       </main>
-      
-      <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4 text-center">
-        <p className="mb-2">1 rue du Général de Gaulle</p>
-        <p className="mb-2">22200 Guingamp</p>
-          <p>Téléphone: 02 96 43 84 52 | Email: ????</p>
+
+      <footer className="bg-primary text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="mb-2">Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN</p>
+          <p className="mb-2">1 rue du Général de Gaulle, 22200 Guingamp</p>
+          <p className="flex items-center justify-center">
+            <Phone className="w-4 h-4 mr-2" />
+            02 96 43 84 52
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
