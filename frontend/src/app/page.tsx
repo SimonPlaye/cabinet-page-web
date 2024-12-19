@@ -3,14 +3,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Scale, Phone } from "lucide-react";
+import { MobileMenu } from "@/components/ui/MobileMenu";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Left Section: Title in a Rectangular Box */}
-          <div className="border-2 border-primary bg-white px-6 py-3 rounded-lg mb-4 md:mb-0 transition-all hover:shadow-md">
+          <div className="border-2 border-primary bg-white px-6 py-3 rounded-lg transition-all hover:shadow-md">
             <Link
               href="/"
               className="text-lg font-bold text-primary text-center block"
@@ -20,8 +21,11 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Right Section: Buttons */}
-          <nav className="flex flex-wrap justify-center gap-4">
+          {/* Mobile Menu */}
+          <MobileMenu />
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex flex-wrap justify-center gap-4">
             <Button
               variant="outline"
               asChild
@@ -53,16 +57,16 @@ export default function Home() {
             alt="Balance de la justice"
             width={1920}
             height={1080}
-            className="w-full h-[75vh] object-cover"
+            className="w-full h-[50vh] md:h-[75vh] object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <Card className="bg-white/90 backdrop-blur-sm max-w-2xl mx-auto">
-              <CardContent className="p-6">
-                <h1 className="text-4xl font-bold mb-4 text-primary">
+              <CardContent className="p-4 md:p-6">
+                <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-primary">
                   <span className="block">Cabinet d&apos;avocat</span>
                   <span className="block">QUINTARD-PLAYE - JUILLAN</span>
                 </h1>
-                <p className="text-xl text-gray-700">
+                <p className="text-lg md:text-xl text-gray-700">
                   Expertise juridique à votre service
                 </p>
               </CardContent>
@@ -70,7 +74,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-8 md:py-16">
           <h2 className="text-3xl font-bold mb-8 text-center text-primary">
             NOTRE CABINET
           </h2>
@@ -86,7 +90,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-12 text-center text-primary">
               NOS PÔLES DE COMPÉTENCES
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {[
                 {
                   title: "Droit de la famille",
@@ -119,22 +123,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-8 md:py-16">
           <h2 className="text-3xl font-bold mb-12 text-center text-primary">
             NOS COLLABORATEURS
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
                 name: "Laetitia Quintard",
                 image: "/assets/lawyer_1.jpeg",
-                description:
-                  "Expert in Corporate Law with 10+ years of experience.",
+                description: "Spécialiste en droit de la famille.",
               },
               {
                 name: "Marie-Charlotte Juillan",
                 image: "/assets/lawyer_2.jpeg",
-                description: "Specialist in International Law and Arbitration.",
+                description: "Experte en droit civil.",
               },
             ].map((collaborator, index) => (
               <Card key={index} className="overflow-hidden">
@@ -158,44 +161,46 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gray-100 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center text-primary">
-              NOUS CONTACTER
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">
-                    Horaires d&apos;ouverture
-                  </h3>
-                  <p className="mb-2">
-                    Nous recevons sur rendez-vous du lundi au vendredi.
-                  </p>
-                  <p>Le Cabinet est ouvert de 8h30 à 12h et de 13h30 à 19h.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Coordonnées</h3>
-                  <p className="mb-2">
-                    Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN
-                  </p>
-                  <p className="mb-2">1 rue du Général de Gaulle</p>
-                  <p className="mb-2">22200 Guingamp</p>
-                  <p>Téléphone: 02 96 43 84 52</p>
-                </CardContent>
-              </Card>
-            </div>
+        <section className="container mx-auto px-4 py-8 md:py-16">
+          <h2 className="text-3xl font-bold mb-12 text-center text-primary">
+            NOUS CONTACTER
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4">
+                  Horaires d&apos;ouverture
+                </h3>
+                <p className="mb-2">
+                  Nous recevons sur rendez-vous du lundi au vendredi.
+                </p>
+                <p>Le Cabinet est ouvert de 8h30 à 12h et de 13h30 à 19h.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Coordonnées</h3>
+                <p className="mb-2">
+                  Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN
+                </p>
+                <p className="mb-2">1 rue du Général de Gaulle</p>
+                <p className="mb-2">22200 Guingamp</p>
+                <p>Téléphone: 02 96 43 84 52</p>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </main>
 
-      <footer className="bg-primary text-white py-8">
+      <footer className="bg-primary text-dark py-6 md:py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="mb-2">Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN</p>
-          <p className="mb-2">1 rue du Général de Gaulle, 22200 Guingamp</p>
-          <p className="flex items-center justify-center">
+          <p className="mb-2 text-sm md:text-base">
+            Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN
+          </p>
+          <p className="mb-2 text-sm md:text-base">
+            1 rue du Général de Gaulle, 22200 Guingamp
+          </p>
+          <p className="flex items-center justify-center text-sm md:text-base">
             <Phone className="w-4 h-4 mr-2" />
             02 96 43 84 52
           </p>

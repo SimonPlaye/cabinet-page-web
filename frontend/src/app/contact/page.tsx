@@ -1,7 +1,8 @@
-import Link from 'next/link'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Phone, ArrowLeft } from 'lucide-react'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Phone, ArrowLeft } from "lucide-react";
+import { MobileMenu } from "@/components/ui/MobileMenu";
 
 export default function Contact() {
   return (
@@ -9,12 +10,19 @@ export default function Contact() {
       <header className="bg-white/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-primary">Nous Contacter</h1>
-          <Button asChild variant="outline" className="hover:bg-primary hover:text-white transition-colors">
-            <Link href="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour à l&apos;accueil
-            </Link>
-          </Button>
+          <MobileMenu />
+          <nav className="hidden md:flex container mx-auto px-4 py-3 flex justify-between items-center">
+            <Button
+              asChild
+              variant="outline"
+              className="hover:bg-primary hover:text-white transition-colors"
+            >
+              <Link href="/">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Retour à l&apos;accueil
+              </Link>
+            </Button>
+          </nav>
         </div>
       </header>
 
@@ -27,15 +35,21 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Horaires d&apos;ouverture</h3>
-                  <p className="mb-2">Nous recevons sur rendez-vous du lundi au vendredi.</p>
+                  <h3 className="text-xl font-semibold mb-4">
+                    Horaires d&apos;ouverture
+                  </h3>
+                  <p className="mb-2">
+                    Nous recevons sur rendez-vous du lundi au vendredi.
+                  </p>
                   <p>Le Cabinet est ouvert de 8h30 à 12h et de 13h30 à 19h.</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-4">Coordonnées</h3>
-                  <p className="mb-2">Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN</p>
+                  <p className="mb-2">
+                    Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN
+                  </p>
                   <p className="mb-2">1 rue du Général de Gaulle</p>
                   <p className="mb-2">22200 Guingamp</p>
                   <p>Téléphone: 02 96 43 84 52</p>
@@ -45,8 +59,8 @@ export default function Contact() {
           </div>
         </section>
       </main>
-      
-      <footer className="bg-primary text-white py-8">
+
+      <footer className="bg-primary text-dark py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="mb-2">Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN</p>
           <p className="mb-2">1 rue du Général de Gaulle, 22200 Guingamp</p>
@@ -57,5 +71,5 @@ export default function Contact() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

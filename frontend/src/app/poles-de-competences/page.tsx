@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { MobileMenu } from "@/components/ui/MobileMenu";
 import { ArrowLeft, Users, Briefcase, Scale, Phone } from "lucide-react";
 
 const competences = [
@@ -29,7 +30,8 @@ export default function PolesDeCompetences() {
           <h1 className="text-2xl font-bold text-primary">
             Nos pôles de compétences
           </h1>
-          <div className="flex space-x-4">
+          <MobileMenu />
+          <nav className="hidden md:flex space-x-4">
             <Button
               asChild
               variant="outline"
@@ -46,7 +48,7 @@ export default function PolesDeCompetences() {
             >
               <Link href="/contact">Contact</Link>
             </Button>
-          </div>
+          </nav>
         </div>
       </header>
 
@@ -67,7 +69,7 @@ export default function PolesDeCompetences() {
         </div>
       </main>
 
-      <footer className="bg-primary text-white py-8">
+      <footer className="bg-primary text-dark  py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="mb-2">Cabinet d&apos;avocat QUINTARD-PLAYE - JUILLAN</p>
           <p className="mb-2">1 rue du Général de Gaulle, 22200 Guingamp</p>
