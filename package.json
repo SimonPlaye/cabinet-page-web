@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "lucide-react": "^0.468.0"
+  },
+  "scripts": {
+    "type-check": "echo 'Running TypeScript type check...' && tsc -b && echo 'TypeScript type check completed.'"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "eslint": "^9.28.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
   }
 }

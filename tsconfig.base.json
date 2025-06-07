@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "incremental": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "strict": true,
+        "target": "esnext",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "lib": ["ESNext"],
+        "types": ["node"],
+    }
+}
