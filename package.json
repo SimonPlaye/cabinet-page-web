@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "bootstrap": "^5.3.6",
     "lucide-react": "^0.468.0",
+    "react-bootstrap": "^2.10.10",
     "react-router-dom": "^7.6.2"
   },
   "scripts": {
