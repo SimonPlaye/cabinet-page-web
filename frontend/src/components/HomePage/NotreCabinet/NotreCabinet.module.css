@@ -1,0 +1,21 @@
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #000000;
+}
+
+.paragraph {
+  font-size: 1.25rem;
+  color: #374151;
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+.ContentBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #000000;
+
+  transition-property: background-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.ContentBox:hover {
+  background-color: #d1d5db;
+  color: #ffffff;
+  border-color: #d1d5db;
+}
+
+.ContentBoxGray {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f2937;
+  color: #ffffff;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  padding: 0.5rem 1rem;
+
+  transition-property: background-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.ContentBoxGray:hover {
+  background-color: #9ca3af;
+  border-color: #d1d5db;
+}

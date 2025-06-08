@@ -1,12 +1,16 @@
 {
   "dependencies": {
-    "lucide-react": "^0.468.0"
+    "bootstrap": "^5.3.6",
+    "lucide-react": "^0.468.0",
+    "react-bootstrap": "^2.10.10",
+    "react-router-dom": "^7.6.2"
   },
   "scripts": {
     "type-check": "echo 'Running TypeScript type check...' && tsc -b && echo 'TypeScript type check completed.'"
   },
   "devDependencies": {
     "@types/node": "^22.15.30",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
     "@vitejs/plugin-react": "^4.5.1",
