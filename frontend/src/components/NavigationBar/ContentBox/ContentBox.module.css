@@ -7,7 +7,7 @@
   font-size: 0.875rem;
   font-weight: 500;
   background-color: transparent;
-  color: inherit;
+  color: #000000;
 
   transition-property: background-color, color;
   transition-duration: 150ms;
