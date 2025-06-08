@@ -10,9 +10,9 @@ const competences = [
     href: "/competences/droit-de-la-famille",
   },
   {
-    title: "Droit des successions",
+    title: "Droit des mineurs",
     icon: Briefcase,
-    href: "/poles-de-competences/droit-des-successions",
+    href: "/competences/droit-des-mineurs",
   },
   {
     title: "Droit pénal",

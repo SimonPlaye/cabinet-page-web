@@ -5,6 +5,7 @@ import { HomePage } from "./HomePage";
 import { Footer } from "components/Footer/Footer";
 import { LesAvocats } from "./LesAvocats";
 import { DroitDeLaFamille } from "./Competences/DroitDeLaFamille";
+import { DroitDesMineurs } from "./Competences/DroitDesMineurs";
 
 export const MainPage = () => {
   return (
@@ -17,6 +18,10 @@ export const MainPage = () => {
         <Route
           path="/competences/droit-de-la-famille"
           element={<DroitDeLaFamille />}
+        />
+        <Route
+          path="/competences/droit-des-mineurs"
+          element={<DroitDesMineurs />}
         />
       </Routes>
       <Footer />
