@@ -1,13 +1,14 @@
-import { Header } from "components/Header/Header";
-import { Title } from "components/Header/Title/Title";
+import { NavigationBar } from "components/NavigationBar/NavigationBar";
 import { Routes, Route } from "react-router-dom";
+import { Competences } from "./Competences";
 
 export const MainPage = () => {
   return (
-    <Header>
+    <div>
+      <NavigationBar />
       <Routes>
-        <Route path="/" element={<Title />} />
+        <Route path="/competences" element={<Competences />} />
       </Routes>
-    </Header>
+    </div>
   );
 };
