@@ -9,11 +9,12 @@ export const NavigationBar = (): React.JSX.Element => {
 
   const isHomePage = location.pathname === "/";
   const isCompetencesPage = location.pathname === "/competences";
+  const isLesAvocatsPage = location.pathname === "/les-avocats";
 
   return (
     <>
       {isHomePage && <HomePageNavigationBar />}
-      {isCompetencesPage && <CompetencesNavigationBar />}
+      {(isCompetencesPage || isLesAvocatsPage) && <BackToHomePage />}
     </>
   );
 };
@@ -26,14 +27,16 @@ const HomePageNavigationBar = (): React.JSX.Element => {
         <Link to="/competences">
           <ContentBox title="Nos pôles de compétences" />
         </Link>
-        <ContentBox title="Nos collaborateurs" />
+        <Link to="/les-avocats">
+          <ContentBox title="Les avocats" />
+        </Link>
         <ContentBoxGray title="Contact" />
       </div>
     </Navbar>
   );
 };
 
-const CompetencesNavigationBar = (): React.JSX.Element => {
+const BackToHomePage = (): React.JSX.Element => {
   return (
     <Navbar className={styles.Header}>
       <Title />

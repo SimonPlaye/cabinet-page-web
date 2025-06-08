@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Competences } from "./Competences";
 import { HomePage } from "./HomePage";
 import { Footer } from "components/Footer/Footer";
+import { LesAvocats } from "./LesAvocats";
 
 export const MainPage = () => {
   return (
@@ -11,6 +12,7 @@ export const MainPage = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/competences" element={<Competences />} />
+        <Route path="les-avocats" element={<LesAvocats />} />
       </Routes>
       <Footer />
     </div>
