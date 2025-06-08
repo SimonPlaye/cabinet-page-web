@@ -17,7 +17,7 @@ const competences = [
   {
     title: "Droit pénal",
     icon: Scale,
-    href: "/poles-de-competences/droit-penal",
+    href: "/competences/droit-penal",
   },
 ];
 

@@ -6,6 +6,7 @@ import { Footer } from "components/Footer/Footer";
 import { LesAvocats } from "./LesAvocats";
 import { DroitDeLaFamille } from "./Competences/DroitDeLaFamille";
 import { DroitDesMineurs } from "./Competences/DroitDesMineurs";
+import { DroitPenal } from "./Competences/DroitPenal";
 
 export const MainPage = () => {
   return (
@@ -23,6 +24,7 @@ export const MainPage = () => {
           path="/competences/droit-des-mineurs"
           element={<DroitDesMineurs />}
         />
+        <Route path="/competences/droit-penal" element={<DroitPenal />} />
       </Routes>
       <Footer />
     </div>
