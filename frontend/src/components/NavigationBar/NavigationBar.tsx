@@ -23,7 +23,9 @@ const HomePageNavigationBar = (): React.JSX.Element => {
         <Link to="/les-avocats">
           <ContentBox title="Les avocats" />
         </Link>
-        <ContentBoxGray title="Contact" />
+        <Link to="/contact">
+          <ContentBoxGray title="Contact" />
+        </Link>
       </div>
     </Navbar>
   );
@@ -37,7 +39,9 @@ const BackToHomePage = (): React.JSX.Element => {
         <Link to="/">
           <ContentBox title="Retour à l'accueil" />
         </Link>
-        <ContentBoxGray title="Contact" />
+        <Link to="/contact">
+          <ContentBoxGray title="Contact" />
+        </Link>
       </div>
     </Navbar>
   );
