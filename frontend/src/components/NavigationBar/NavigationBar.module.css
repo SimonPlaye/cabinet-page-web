@@ -21,9 +21,37 @@
   }
 }
 
+.desktopNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .allContentBoxesContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
+}
+
+.mobileHeaderBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+    width: 100%;
+  }
 }
