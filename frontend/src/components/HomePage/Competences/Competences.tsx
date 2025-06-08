@@ -7,7 +7,7 @@ const competences = [
   {
     title: "Droit de la famille",
     icon: Users,
-    href: "/poles-de-competences/droit-de-la-famille",
+    href: "/competences/droit-de-la-famille",
   },
   {
     title: "Droit des successions",

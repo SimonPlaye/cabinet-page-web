@@ -8,15 +8,8 @@ export const NavigationBar = (): React.JSX.Element => {
   const location = useLocation();
 
   const isHomePage = location.pathname === "/";
-  const isCompetencesPage = location.pathname === "/competences";
-  const isLesAvocatsPage = location.pathname === "/les-avocats";
 
-  return (
-    <>
-      {isHomePage && <HomePageNavigationBar />}
-      {(isCompetencesPage || isLesAvocatsPage) && <BackToHomePage />}
-    </>
-  );
+  return <>{isHomePage ? <HomePageNavigationBar /> : <BackToHomePage />}</>;
 };
 
 const HomePageNavigationBar = (): React.JSX.Element => {

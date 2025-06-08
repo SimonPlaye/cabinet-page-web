@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./Competences.module.css";
-// Use any icons you want — fallback to emojis or inline SVG if no icon library
-import { Users, Briefcase, Scale, ArrowLeft } from "lucide-react"; // optional
+import { Users, Briefcase, Scale } from "lucide-react";
 
 const competences = [
   {
     title: "Droit de la famille",
     icon: Users,
-    href: "/poles-de-competences/droit-de-la-famille",
+    href: "/competences/droit-de-la-famille",
   },
   {
     title: "Droit des successions",
