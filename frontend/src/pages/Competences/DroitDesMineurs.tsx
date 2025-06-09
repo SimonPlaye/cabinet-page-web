@@ -6,6 +6,7 @@ export const DroitDesMineurs = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h2 className={styles.heading}>NOS PÔLES DE COMPÉTENCES</h2>
         <div className={styles.card}>
           <div className={styles.cardContent}>
             <UserCircle className={styles.icon} />

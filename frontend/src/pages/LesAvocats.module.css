@@ -1,5 +1,5 @@
 .main {
-  padding: 3rem 0.5rem;
+  padding: 2rem 0.5rem;
 }
 
 .grid {
@@ -54,4 +54,18 @@
 .description {
   color: #374151;
   font-size: 1rem;
+}
+
+.heading {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: 2rem;
+  }
 }

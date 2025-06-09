@@ -4,7 +4,7 @@ export const Honoraires = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Honoraires au Cabinet</h2>
+        <h2 className={styles.heading}>HONORAIRES AU CABINET</h2>
 
         <p className={styles.paragraph}>
           Le coût de nos diligences fait l’objet d’une{" "}

@@ -29,6 +29,7 @@ export const Competences = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h2 className={styles.heading}>NOS PÔLES DE COMPÉTENCES</h2>
         <div className={styles.grid}>
           {competences.map((item, index) => (
             <a href={item.href} className={styles.card} key={index}>
