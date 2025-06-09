@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "vite",
+    "build": "vite build",
     "lint-check": "echo 'Running ESLint check...' && eslint . --quiet . && echo 'ESLint check completed.'",
     "format-check": "prettier --check .",
     "type-check": "pnpm -C .. run type-check"
