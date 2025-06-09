@@ -6,6 +6,7 @@ export default defineConfig(() => {
     build: {
       outDir: "build",
     },
+    base: "./",
     plugins: [react(), tsconfigPaths()],
     define: process.env.NODE_ENV === "development" ? { global: "window" } : {},
     server: {
