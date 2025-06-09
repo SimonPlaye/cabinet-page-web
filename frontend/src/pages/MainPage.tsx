@@ -9,6 +9,7 @@ import { DroitDesMineurs } from "./Competences/DroitDesMineurs";
 import { DroitPenal } from "./Competences/DroitPenal";
 import { NousContacter } from "components/HomePage/NousContacter/NousContacter";
 import { DroitCivil } from "./Competences/DroitCivil";
+import { Honoraires } from "./Honoraires";
 
 export const MainPage = () => {
   return (
@@ -29,6 +30,7 @@ export const MainPage = () => {
         <Route path="/competences/droit-penal" element={<DroitPenal />} />
         <Route path="/competences/droit-civil" element={<DroitCivil />} />
         <Route path="/contact" element={<NousContacter />} />
+        <Route path="/honoraires" element={<Honoraires />} />
       </Routes>
       <Footer />
     </div>

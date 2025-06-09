@@ -36,6 +36,9 @@ const HomePageMobileVersion = (): React.JSX.Element => {
       </div>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
+          <Nav.Link as={Link} to="/honoraires">
+            Nos honoraires
+          </Nav.Link>
           <Nav.Link as={Link} to="/competences">
             Nos pôles de compétences
           </Nav.Link>
@@ -56,6 +59,9 @@ const HomePageComputerVersion = (): React.JSX.Element => {
     <div className={styles.desktopNav}>
       <Title />
       <div className={styles.allContentBoxesContainer}>
+        <Link to="/honoraires">
+          <ContentBox title="Nos honoraires" />
+        </Link>
         <Link to="/competences">
           <ContentBox title="Nos pôles de compétences" />
         </Link>
