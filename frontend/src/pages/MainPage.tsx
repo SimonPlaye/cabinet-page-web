@@ -8,6 +8,7 @@ import { DroitDeLaFamille } from "./Competences/DroitDeLaFamille";
 import { DroitDesMineurs } from "./Competences/DroitDesMineurs";
 import { DroitPenal } from "./Competences/DroitPenal";
 import { NousContacter } from "components/HomePage/NousContacter/NousContacter";
+import { DroitCivil } from "./Competences/DroitCivil";
 
 export const MainPage = () => {
   return (
@@ -26,6 +27,7 @@ export const MainPage = () => {
           element={<DroitDesMineurs />}
         />
         <Route path="/competences/droit-penal" element={<DroitPenal />} />
+        <Route path="/competences/droit-civil" element={<DroitCivil />} />
         <Route path="/contact" element={<NousContacter />} />
       </Routes>
       <Footer />

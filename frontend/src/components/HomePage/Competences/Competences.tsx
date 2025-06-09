@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Competences.module.css";
 import { Link } from "react-router-dom";
-import { Users, Briefcase, Scale } from "lucide-react"; // Replace with your icon source
+import { Users, UserCircle, Briefcase, Scale } from "lucide-react"; // Replace with your icon source
 
 const competences = [
   {
@@ -11,13 +11,18 @@ const competences = [
   },
   {
     title: "Droit des mineurs",
-    icon: Briefcase,
+    icon: UserCircle,
     href: "/competences/droit-des-mineurs",
   },
   {
     title: "Droit pénal",
     icon: Scale,
     href: "/competences/droit-penal",
+  },
+  {
+    title: "Droit civil",
+    icon: Briefcase,
+    href: "/competences/droit-civil",
   },
 ];
 
