@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "./Competences.module.css";
-import { Users, Briefcase, Scale } from "lucide-react";
+import { Users, UserCircle, Briefcase, Scale } from "lucide-react";
 
 const competences = [
   {
-    title: "Droit de la famille",
+    title: "Droit de la famille, du patrimoine et des successions",
     icon: Users,
     href: "/competences/droit-de-la-famille",
   },
   {
     title: "Droit des mineurs",
-    icon: Briefcase,
+    icon: UserCircle,
     href: "/competences/droit-des-mineurs",
   },
   {
@@ -18,12 +18,18 @@ const competences = [
     icon: Scale,
     href: "/competences/droit-penal",
   },
+  {
+    title: "Droit civil",
+    icon: Briefcase,
+    href: "/competences/droit-civil",
+  },
 ];
 
 export const Competences = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h2 className={styles.heading}>NOS PÔLES DE COMPÉTENCES</h2>
         <div className={styles.grid}>
           {competences.map((item, index) => (
             <a href={item.href} className={styles.card} key={index}>

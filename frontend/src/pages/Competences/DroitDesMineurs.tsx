@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./DroitDesMineurs.module.css";
-import { Briefcase } from "lucide-react";
+import { UserCircle } from "lucide-react";
 
 export const DroitDesMineurs = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h2 className={styles.heading}>NOS PÔLES DE COMPÉTENCES</h2>
         <div className={styles.card}>
           <div className={styles.cardContent}>
-            <Briefcase className={styles.icon} />
+            <UserCircle className={styles.icon} />
             <h2 className={styles.title}>Droit des successions</h2>
             <p className={styles.paragraph}>
               Notre cabinet offre une expertise approfondie en droit des

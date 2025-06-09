@@ -6,7 +6,7 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }
 
 .heading {
@@ -29,7 +29,7 @@
 
 @media (max-width: 640px) {
   .heading {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .subheading {
@@ -75,4 +75,20 @@
 .paragraph {
   color: #4b5563;
   margin-bottom: 0.5rem;
+}
+
+.emailLink {
+  color: blue;
+  text-decoration: none;
+  font-weight: 500;
+  transition: font-weight 0.2s ease-in-out;
+}
+
+.emailLink:hover {
+  font-weight: 700;
+}
+
+.paragraph strong {
+  color: #111827;
+  font-weight: 700;
 }

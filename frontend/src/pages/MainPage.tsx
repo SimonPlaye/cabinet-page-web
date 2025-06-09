@@ -7,11 +7,16 @@ import { LesAvocats } from "./LesAvocats";
 import { DroitDeLaFamille } from "./Competences/DroitDeLaFamille";
 import { DroitDesMineurs } from "./Competences/DroitDesMineurs";
 import { DroitPenal } from "./Competences/DroitPenal";
-import { Contact } from "./Contact";
+import { NousContacter } from "components/HomePage/NousContacter/NousContacter";
+import { DroitCivil } from "./Competences/DroitCivil";
+import { Honoraires } from "./Honoraires";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export const MainPage = () => {
   return (
     <div>
+      <ScrollToTop />
       <NavigationBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -26,9 +31,21 @@ export const MainPage = () => {
           element={<DroitDesMineurs />}
         />
         <Route path="/competences/droit-penal" element={<DroitPenal />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/competences/droit-civil" element={<DroitCivil />} />
+        <Route path="/contact" element={<NousContacter />} />
+        <Route path="/honoraires" element={<Honoraires />} />
       </Routes>
       <Footer />
     </div>
   );
+};
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [pathname]);
+
+  return null;
 };

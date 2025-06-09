@@ -1,16 +1,16 @@
 import React from "react";
-import styles from "./DroitDeLaFamille.module.css";
-import { Users } from "lucide-react"; // Replace with your icon source or inline SVG
+import styles from "./DroitCivil.module.css";
+import { Briefcase } from "lucide-react"; // Replace with your icon source or inline SVG
 
-export const DroitDeLaFamille = (): React.JSX.Element => {
+export const DroitCivil = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <h2 className={styles.heading}>NOS PÔLES DE COMPÉTENCES</h2>
         <div className={styles.card}>
           <div className={styles.cardContent}>
-            <Users className={styles.icon} />
-            <h2 className={styles.title}>Droit de la famille</h2>
+            <Briefcase className={styles.icon} />
+            <h2 className={styles.title}>Droit Civil</h2>
             <p className={styles.paragraph}>
               Notre cabinet est spécialisé dans tous les aspects du droit de la
               famille, offrant des conseils et une représentation dans des

@@ -18,6 +18,7 @@ export const LesAvocats = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h2 className={styles.heading}>LES AVOCATS</h2>
         <div className={styles.grid}>
           {collaborateurs.map((collab, index) => (
             <div className={styles.card} key={index}>
