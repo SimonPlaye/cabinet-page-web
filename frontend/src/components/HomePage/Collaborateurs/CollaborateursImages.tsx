@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Collaborateurs.module.css";
+import styles from "./CollaborateursImages.module.css";
 
 const collaborators = [
   {
@@ -14,10 +14,9 @@ const collaborators = [
   },
 ];
 
-export const Collaborateurs = (): React.JSX.Element => {
+export const CollaborateursImages = (): React.JSX.Element => {
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>NOS COLLABORATEURS</h2>
       <div className={styles.grid}>
         {collaborators.map((collab, index) => (
           <div className={styles.card} key={index}>

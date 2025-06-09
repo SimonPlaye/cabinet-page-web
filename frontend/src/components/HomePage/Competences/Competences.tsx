@@ -5,7 +5,7 @@ import { Users, UserCircle, Briefcase, Scale } from "lucide-react"; // Replace w
 
 const competences = [
   {
-    title: "Droit de la famille",
+    title: "Droit de la famille, du patrimoine et des successions",
     icon: Users,
     href: "/competences/droit-de-la-famille",
   },
