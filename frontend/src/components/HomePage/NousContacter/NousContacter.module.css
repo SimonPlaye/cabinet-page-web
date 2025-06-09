@@ -87,3 +87,8 @@
 .emailLink:hover {
   font-weight: 700;
 }
+
+.paragraph strong {
+  color: #111827;
+  font-weight: 700;
+}
