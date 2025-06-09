@@ -76,3 +76,14 @@
   color: #4b5563;
   margin-bottom: 0.5rem;
 }
+
+.emailLink {
+  color: blue;
+  text-decoration: none;
+  font-weight: 500;
+  transition: font-weight 0.2s ease-in-out;
+}
+
+.emailLink:hover {
+  font-weight: 700;
+}
