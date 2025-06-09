@@ -3,14 +3,14 @@ import styles from "./Collaborateurs.module.css";
 
 const collaborators = [
   {
-    name: "Laetitia Quintard",
+    name: "Laetitia QUINTARD PLAYE",
     image: "/assets/lawyer_1.jpeg",
-    description: "Spécialiste en droit de la famille.",
+    description: "Avocat au Barreau de SAINT-BRIEUC (22) depuis 1996.",
   },
   {
-    name: "Marie-Charlotte Juillan",
+    name: "Marie-Charlotte JUILLAN",
     image: "/assets/lawyer_2.jpeg",
-    description: "Experte en droit civil.",
+    description: "Avocat au Barreau de SAINT-BRIEUC (22) depuis 2010.",
   },
 ];
 

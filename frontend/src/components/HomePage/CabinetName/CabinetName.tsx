@@ -12,11 +12,11 @@ export const CabinetName = (): React.JSX.Element => {
         <div className={styles.card}>
           <div className={styles.cardContent}>
             <h1 className={styles.title}>
-              <span>Cabinet d&apos;avocat</span>
-              <span>QUINTARD-PLAYE - JUILLAN</span>
+              <span>SELARL</span>
+              <span>QUINTARD PLAYE - JUILLAN</span>
             </h1>
             <p className={styles.subtitle}>
-              Expertise juridique à votre service
+              Avocats associés au Barreau de SAINT-BRIEUC (22)
             </p>
           </div>
         </div>
