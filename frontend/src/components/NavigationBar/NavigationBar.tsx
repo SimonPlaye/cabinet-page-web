@@ -93,6 +93,9 @@ const BackToHomePageMobileVersion = (): React.JSX.Element => {
           <Nav.Link as={Link} to="/">
             Accueil
           </Nav.Link>
+          <Nav.Link as={Link} to="/honoraires">
+            Nos honoraires
+          </Nav.Link>
           <Nav.Link as={Link} to="/competences">
             Nos pôles de compétences
           </Nav.Link>
@@ -112,6 +115,9 @@ const BackToHomePageComputerVersion = (): React.JSX.Element => {
       <div className={styles.allContentBoxesContainer}>
         <Link to="/">
           <ContentBox title="Retour à l'accueil" />
+        </Link>
+        <Link to="/honoraires">
+          <ContentBox title="Nos honoraires" />
         </Link>
         <Link to="/competences">
           <ContentBox title="Nos pôles de compétences" />
