@@ -15,4 +15,3 @@ pnpm i
 cd frontend
 pnpm i
 ```
-
