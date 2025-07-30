@@ -1,34 +1,41 @@
-import React from "react";
+import type React from "react";
 import styles from "./DroitDeLaFamille.module.css";
-import { Users } from "lucide-react"; // Replace with your icon source or inline SVG
+import { Scale } from "lucide-react";
 
 export const DroitDeLaFamille = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h2 className={styles.heading}>NOS PÔLES DE COMPÉTENCES</h2>
-        <div className={styles.card}>
-          <div className={styles.cardContent}>
-            <Users className={styles.icon} />
-            <h2 className={styles.title}>Droit de la famille</h2>
-            <p className={styles.paragraph}>
-              Notre cabinet est spécialisé dans tous les aspects du droit de la
-              famille, offrant des conseils et une représentation dans des
-              domaines tels que :
-            </p>
-            <ul className={styles.list}>
-              <li>Divorce et séparation</li>
-              <li>Garde d&apos;enfants et droits de visite</li>
-              <li>Pension alimentaire et prestation compensatoire</li>
-              <li>Adoption</li>
-              <li>Protection des mineurs</li>
-              <li>Contrats de mariage et PACS</li>
-            </ul>
-            <p className={styles.paragraph}>
-              Nous comprenons la nature sensible des affaires familiales et nous
-              nous efforçons d&apos;offrir un soutien compatissant et des
-              solutions pratiques à nos clients pendant ces périodes difficiles.
-            </p>
+        <h2 className={styles.headingCompetences}>Nos Pôles de compétences</h2>
+        <h2 className={styles.heading}>Droit de la famille</h2>
+
+        <div className={styles.cardsContainer}>
+          <div className={styles.card}>
+            <div className={styles.cardContent}>
+              <Scale className={styles.icon} />
+              <h3 className={styles.lawyerName}>
+                Maître Laetitia QUINTARD PLAYE
+              </h3>
+              <ul className={styles.list}>
+                <li>Divorce judiciaire</li>
+                <li>Divorce par consentement mutuel</li>
+                <li>
+                  Procédure relative à l’organisation de la vie à la suite de la
+                  séparation de couples non mariés
+                </li>
+                <li>
+                  Procédure relative à la séparation du patrimoine d’époux
+                  divorcés, de concubins ou de couples pacsés
+                </li>
+                <li>Révision de prestation compensatoire</li>
+                <li>Liquidation de régime matrimonial</li>
+                <li>Liquidation d’indivision</li>
+                <li>Droit de visite des grands-parents</li>
+                <li>Contestation ou reconnaissance de filiation</li>
+                <li>Adoption</li>
+                <li>Succession</li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>

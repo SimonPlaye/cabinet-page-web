@@ -1,34 +1,49 @@
-import React from "react";
+import type React from "react";
 import styles from "./DroitCivil.module.css";
-import { Briefcase } from "lucide-react"; // Replace with your icon source or inline SVG
+import { Scale, Gavel } from "lucide-react";
 
 export const DroitCivil = (): React.JSX.Element => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h2 className={styles.heading}>NOS PÔLES DE COMPÉTENCES</h2>
-        <div className={styles.card}>
-          <div className={styles.cardContent}>
-            <Briefcase className={styles.icon} />
-            <h2 className={styles.title}>Droit Civil</h2>
-            <p className={styles.paragraph}>
-              Notre cabinet est spécialisé dans tous les aspects du droit de la
-              famille, offrant des conseils et une représentation dans des
-              domaines tels que :
-            </p>
-            <ul className={styles.list}>
-              <li>Divorce et séparation</li>
-              <li>Garde d&apos;enfants et droits de visite</li>
-              <li>Pension alimentaire et prestation compensatoire</li>
-              <li>Adoption</li>
-              <li>Protection des mineurs</li>
-              <li>Contrats de mariage et PACS</li>
-            </ul>
-            <p className={styles.paragraph}>
-              Nous comprenons la nature sensible des affaires familiales et nous
-              nous efforçons d&apos;offrir un soutien compatissant et des
-              solutions pratiques à nos clients pendant ces périodes difficiles.
-            </p>
+        <h2 className={styles.headingCompetences}>Nos Pôles de compétences</h2>
+        <h2 className={styles.heading}>Droit civil</h2>
+
+        <div className={styles.cardsContainer}>
+          <div className={styles.card}>
+            <div className={styles.cardContent}>
+              <Scale className={styles.icon} />
+              <h3 className={styles.lawyerName}>
+                Maître Laetitia QUINTARD PLAYE
+              </h3>
+              <ul className={styles.list}>
+                <li>Troubles anormaux de voisinage</li>
+                <li>Bornage</li>
+                <li>Servitudes (de vue, de passage etc…)</li>
+                <li>Empiètement</li>
+                <li>Enchères dans le cadre de vente sur saisie immobilière</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.card}>
+            <div className={styles.cardContent}>
+              <Gavel className={styles.icon} />
+              <h3 className={styles.lawyerName}>
+                Maître Marie-Charlotte JUILLAN
+              </h3>
+              <ul className={styles.list}>
+                <li>
+                  Baux d&aposhabitation (expulsion, loyers impayés, logement
+                  vétuste…) : assistance locataire, bailleur
+                </li>
+                <li>Droit bancaire</li>
+                <li>Litige entre les particuliers (conflits de voisinage…)</li>
+                <li>Procédures devant le juge de l&aposexécution</li>
+                <li>Droit des contrats</li>
+                <li>Servitudes légales et conventionnelles</li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>
