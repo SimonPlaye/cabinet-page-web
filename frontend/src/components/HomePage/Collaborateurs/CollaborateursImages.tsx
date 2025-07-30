@@ -17,7 +17,7 @@ const collaborators = [
 export const CollaborateursImages = (): React.JSX.Element => {
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>NOS COLLABORATEURS</h2>
+      <h2 className={styles.heading}>LES DEUX AVOCATS ASSOCIÉS</h2>
       <div className={styles.grid}>
         {collaborators.map((collab, index) => (
           <div className={styles.card} key={index}>
