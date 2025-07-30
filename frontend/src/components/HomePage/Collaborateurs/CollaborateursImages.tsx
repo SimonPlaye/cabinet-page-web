@@ -4,12 +4,12 @@ import styles from "./CollaborateursImages.module.css";
 const collaborators = [
   {
     name: "Laetitia QUINTARD PLAYE",
-    image: "/assets/lawyer_1.jpeg",
+    image: "/assets/photo_laetitia_quintard.jpeg",
     description: "Avocat au Barreau de SAINT-BRIEUC (22) depuis 1996.",
   },
   {
     name: "Marie-Charlotte JUILLAN",
-    image: "/assets/lawyer_2.jpeg",
+    image: "/assets/photo_marie_charlotte_julian.jpg",
     description: "Avocat au Barreau de SAINT-BRIEUC (22) depuis 2010.",
   },
 ];
