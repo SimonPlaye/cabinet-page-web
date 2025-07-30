@@ -1,68 +1,276 @@
 .page {
   min-height: 100vh;
-  background-color: #f9fafb;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
 }
 
 .main {
   flex-grow: 1;
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
+}
+
+.headingCompetences {
+  font-size: clamp(0.5rem, 2vw + 1rem, 2rem);
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: clamp(0.25rem, 0.25vw + 1rem, 3rem);
+  font-weight: 700;
+  font-style: italic;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #000000, transparent);
+  border-radius: 2px;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
-  background-color: white;
-  max-width: 48rem;
-  margin: 0 auto;
-  border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #000000, #000000, transparent);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+}
+
+.card:nth-child(1) {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.card:nth-child(2) {
+  animation: slideInRight 0.6s ease-out 0.2s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .cardContent {
-  padding: 1.5rem;
+  padding: 3rem 2.5rem;
+  position: relative;
 }
 
 .icon {
   width: 4rem;
   height: 4rem;
-  color: #000000;
-  margin: 0 auto 1rem;
+  color: #ffffff;
+  margin: 0 auto 2rem;
   display: block;
+  padding: 1rem;
+  background: linear-gradient(135deg, #dbeafe, #000000);
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.title {
-  font-size: 1.5rem;
+.card:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, #555555, #000000);
+  color: white;
+}
+
+.lawyerName {
+  font-size: 1.75rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: #1e293b;
+  position: relative;
+  padding-bottom: 1rem;
 }
 
-.paragraph {
-  color: #374151;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+.lawyerName::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff, #000000);
+  border-radius: 1px;
 }
 
 .list {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  color: #374151;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #475569;
 }
 
-.heading {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
-  font-weight: bold;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 3rem;
+.list li {
+  position: relative;
+  padding: 1rem 0 1rem 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.list li::before {
+  content: "⚖️";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.list li:hover {
+  color: #1e293b;
+  padding-left: 2.5rem;
+  background: linear-gradient(90deg, #f8fafc, transparent);
+}
+
+.list li:hover::before {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 3rem 1rem;
+  }
+
+  .headingCompetences {
+    font-size: 2.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .cardContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .lawyerName {
+    font-size: 1.5rem;
+  }
+
+  .list li {
+    font-size: 1rem;
+    padding: 0.8rem 0 0.8rem 1.8rem;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width: 640px) {
-  .heading {
+  .headingCompetences {
     font-size: 2rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .cardsContainer {
+    gap: 1.5rem;
+  }
+
+  .cardContent {
+    padding: 1.5rem 1rem;
+  }
+
+  .lawyerName {
+    font-size: 1.3rem;
+  }
+
+  .list li {
+    font-size: 0.95rem;
+    padding: 0.7rem 0 0.7rem 1.5rem;
   }
 }

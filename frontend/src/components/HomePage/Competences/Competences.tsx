@@ -10,7 +10,7 @@ const competences = [
     href: "/competences/droit-de-la-famille",
   },
   {
-    title: "Droit des mineurs",
+    title: "Droit des mineurs et de leurs parents",
     icon: UserCircle,
     href: "/competences/droit-des-mineurs",
   },
