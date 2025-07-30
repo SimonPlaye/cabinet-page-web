@@ -5,12 +5,12 @@ const collaborateurs = [
   {
     name: "Me. Laetitia QUINTARD-PLAYE",
     description: "Spécialiste en droit de la famille.",
-    image: "/assets/lawyer_1.jpeg",
+    image: "/assets/photo_laetitia_quintard.jpeg",
   },
   {
     name: "Me. Marie-Charlotte JUILLAN",
     description: "Experte en droit civil.",
-    image: "/assets/lawyer_2.jpeg",
+    image: "/assets/photo_marie_charlotte_julian.jpg",
   },
 ];
 
