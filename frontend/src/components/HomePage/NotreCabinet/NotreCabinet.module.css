@@ -199,6 +199,18 @@
     padding: 30px 20px;
   }
 
+  .introduction::before {
+    padding: 2px;
+    font-size: 1.25rem;
+  }
+
+  .lawyer::before {
+    padding: 3px;
+  }
+  .practice::after {
+    content: "";
+  }
+
   .paragraph {
     font-size: 1rem;
     text-align: left;

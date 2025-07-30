@@ -5,7 +5,7 @@ export const Honoraires = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.heading}>HONORAIRES AU CABINET</h2>
-        <h3 className={styles.subheading}>Convention d&aposhonoraire</h3>
+        <h3 className={styles.subheading}>Convention d&apos;honoraire</h3>
         <p className={styles.paragraph}>
           Le coût de nos diligences fait l’objet d’une{" "}
           <strong>convention d’honoraires</strong> préalable qui comporte
