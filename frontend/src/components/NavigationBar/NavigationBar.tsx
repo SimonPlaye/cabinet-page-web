@@ -42,9 +42,6 @@ const HomePageMobileVersion = (): React.JSX.Element => {
           <Nav.Link as={Link} to="/competences">
             Nos pôles de compétences
           </Nav.Link>
-          <Nav.Link as={Link} to="/les-avocats">
-            Les avocats
-          </Nav.Link>
           <Nav.Link as={Link} to="/contact">
             Contact
           </Nav.Link>
@@ -64,9 +61,6 @@ const HomePageComputerVersion = (): React.JSX.Element => {
         </Link>
         <Link to="/competences">
           <ContentBox title="Nos pôles de compétences" />
-        </Link>
-        <Link to="/les-avocats">
-          <ContentBox title="Les avocats" />
         </Link>
         <Link to="/contact">
           <ContentBoxGray title="Contact" />
