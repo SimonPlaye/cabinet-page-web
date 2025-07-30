@@ -6,11 +6,26 @@
 }
 
 .heading {
-  font-size: 1.875rem;
-  font-weight: bold;
-  color: #000000;
+  font-size: 3rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 60px;
+  color: #000000;
+  letter-spacing: 0.05em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #fafafa, #000000, transparent);
+  border-radius: 2px;
 }
 
 .grid {
@@ -57,13 +72,21 @@
   color: #4b5563;
 }
 
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 640px) {
   .section {
     padding: 2rem 1rem;
   }
 
   .heading {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .textContent {
@@ -81,5 +104,11 @@
   .card {
     max-width: 90%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.8rem;
   }
 }
