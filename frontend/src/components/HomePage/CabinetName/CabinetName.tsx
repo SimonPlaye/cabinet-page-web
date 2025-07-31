@@ -4,7 +4,7 @@ export const CabinetName = (): React.JSX.Element => {
   return (
     <section className={styles.section}>
       <img
-        src="/assets/cabinet.jpg"
+        src="/assets/cabinet.jpeg"
         alt="Balance de la justice"
         className={styles.image}
       />
