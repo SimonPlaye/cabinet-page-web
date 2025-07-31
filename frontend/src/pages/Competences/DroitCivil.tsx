@@ -34,12 +34,12 @@ export const DroitCivil = (): React.JSX.Element => {
               </h3>
               <ul className={styles.list}>
                 <li>
-                  Baux d&aposhabitation (expulsion, loyers impayés, logement
+                  Baux d&apos;habitation (expulsion, loyers impayés, logement
                   vétuste…) : assistance locataire, bailleur
                 </li>
                 <li>Droit bancaire</li>
                 <li>Litige entre les particuliers (conflits de voisinage…)</li>
-                <li>Procédures devant le juge de l&aposexécution</li>
+                <li>Procédures devant le juge de l&apos;exécution</li>
                 <li>Droit des contrats</li>
                 <li>Servitudes légales et conventionnelles</li>
               </ul>
