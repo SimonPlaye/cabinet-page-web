@@ -18,7 +18,9 @@ export const NotreCabinet = (): React.JSX.Element => {
 
           <div className={styles.lawyers}>
             <div className={styles.lawyer}>
-              <h3 className={styles.lawyerName}>Maître QUINTARD PLAYE</h3>
+              <h3 className={styles.lawyerName}>
+                Maître Laetitia QUINTARD PLAYE
+              </h3>
               <p className={styles.paragraph}>
                 Maître QUINTARD PLAYE a prêté serment en 1996 et exerce
                 principalement dans le domaine du droit de la famille et des
@@ -28,7 +30,9 @@ export const NotreCabinet = (): React.JSX.Element => {
             </div>
 
             <div className={styles.lawyer}>
-              <h3 className={styles.lawyerName}>Maître JUILLAN</h3>
+              <h3 className={styles.lawyerName}>
+                Maître Marie-Charlotte JUILLAN
+              </h3>
               <p className={styles.paragraph}>
                 Maître JUILLAN, titulaire d&apos;un DESS carrières judiciaires a
                 prêté serment en 2010.
